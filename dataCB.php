@@ -3,7 +3,7 @@
 
 include("Conn_Bdd.php");
   $sqlCB   = "SELECT * FROM CB";
-  $sqlP       = "SELECT * FROM Paiment" ;
+  $sqlP       = "SELECT *,Num_CB FROM Paiment , CB WHERE Paiment.idCB = CB.id " ;
 
 
 

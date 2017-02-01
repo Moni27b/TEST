@@ -8,10 +8,11 @@ $motdepasse = $_POST['motdepasse'];
 
 
 
-$sql = "SELECT * FROM Client WHERE N_Compte = '$login'  AND Password = '$motdepasse'";
-
+$sql = "SELECT * FROM Client  WHERE N_Compte = '$login'  AND Password = '$motdepasse'";
+$sqlCB   = "SELECT * FROM CB";
 
 $result = $conn->query($sql);
+
 
 
 
@@ -25,6 +26,7 @@ if (!$row = $result->fetch()){
     // on la démarre :)
   session_start ();
   // on enregistre les paramètres de notre visiteur comme variables de session ($login et $pwd) (notez bien que l'on utilise pas le $ pour enregistrer ces variables)
+
 
   $_SESSION['Nom'] = $row['Nom'];
   $_SESSION['N_Compte'] = $row['N_Compte'];

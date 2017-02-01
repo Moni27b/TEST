@@ -53,10 +53,10 @@ include("Session.php");
 
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./HomeUser.php">Accueil</a></li>
-            <li ><a href="GestionCB.php">Gestion CB</a></li>
+            <li ><a href="HomeUser.php">Accueil</a></li>
+            <li><a href="GestionCB.php">Gestion CB</a></li>
             <li ><a href="GestionPaiment.php">Paiment</a></li>
-            <li ><a href="Historique.php">Historique</a></li>
+            <li  class="active" ><a href="#">Historique</a></li>
 
 
           </ul>
@@ -71,22 +71,41 @@ include("Session.php");
         </div><!--/.nav-collapse -->
       </div>
     </nav>
+    <h2 class="sub-header">Historique de mes paiments</h2>
 
 
     <div class="container">
-
-
-        <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
-          <h1> <?php echo 'Bonjour '.$_SESSION['Nom']; ?></h1>
-          <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-          <p>To see the difference between static and fixed top navbars, just scroll.</p>
-          <p>
-
-          </p>
-        </div>
-
+      <?php include("dataCB.php"); ?>
       <!-- Main component for a primary marketing message or call to action -->
+
+        <table  id = "example" class="table table-bordered  ">
+        <thead>
+            <tr>
+
+                 <th>id Paiment</th>
+                 <th>Commercant</th>
+                 <th>Montant</th>
+                 <th>Numero CB</th>
+                 <th>Date Paiment</th>
+
+             </tr>
+
+
+        </thead>
+        <?php while($row = $resultP->fetch()) {?>
+          <tr>
+            <td><? echo $row['idPaiment']; ?></td>
+            <td><? echo $row['Commercant']; ?></td>
+            <td><? echo $row['Montant']; ?></td>
+            <td><? echo $row['Num_CB']; ?></td>
+            <td><? echo $row['DateP']; ?></td>
+
+
+
+          </tr>
+          <?php } ?>
+        </table>
+
 
     </div> <!-- /container -->
 

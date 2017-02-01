@@ -56,7 +56,7 @@ include("Session.php");
             <li ><a href="HomeUser.php">Accueil</a></li>
             <li class="active"><a href="#">Gestion CB</a></li>
             <li ><a href="GestionPaiment.php">Paiment</a></li>
-            <li ><a href="#">Historique</a></li>
+            <li ><a href="Historique.php">Historique</a></li>
 
 
           </ul>
@@ -104,6 +104,7 @@ include("Session.php");
           </tr>
           <?php } ?>
         </table>
+        
 
 
     </div> <!-- /container -->

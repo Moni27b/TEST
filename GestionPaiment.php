@@ -56,7 +56,7 @@ include("Session.php");
             <li ><a href="HomeUser.php">Accueil</a></li>
             <li ><a href="GestionCB.php">Gestion CB</a></li>
             <li class="active"><a href="#">Paiment</a></li>
-            <li ><a href="#">Historique</a></li>
+            <li ><a href="Historique.php">Historique</a></li>
 
 
           </ul>
@@ -81,7 +81,7 @@ include("Session.php");
 
         <div class="form-group">
           <label for="Cm">Commercant</label>
-          <select class="form-control" id="Cm" name="Cm">
+          <select class="form-control" id="Cm" name="Cm" required>
             <option>Auchan</option>
             <option>Nike</option>
             <option>Dominos Pizza</option>
@@ -91,7 +91,7 @@ include("Session.php");
         </div>
         <div class="form-group">
           <label for="Num_CB">Carte Bancaire</label>
-          <select class="form-control" id="Num_CB" name="Num_CB">
+          <select class="form-control" id="Num_CB" name="Num_CB" required>
             <?php while($row = $resultCB->fetch()) {?>
             <option><? echo $row['Num_CB']; ?></option>
 
@@ -102,13 +102,13 @@ include("Session.php");
         <div class="form-group">
           <label for="CVV" >CVV</label>
           <div class="col-10">
-            <input size='4' minlength='3' maxlength='3' class="form-control" type="number" placeholder="345"  id="CVV" >
+            <input min='100' max='999'  class="form-control" type="number" placeholder="345"  id="CVV" required >
       </div>
 </div>
       <div class="form-group">
-        <label for="solde" >Tarif</label>
+        <label for="solde" >Tarif (EUR)</label>
         <div class="col-10">
-          <input  maxlength='9' class="form-control" type="number"  id="tarif" name ="tarif">
+          <input  min='1' max='1000' class="form-control" type="number"  id="tarif" name ="tarif" required>
       </div>
 </div>
 

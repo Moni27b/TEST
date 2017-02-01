@@ -16,11 +16,11 @@
 
                 <div class="form-group">
                   <label for="Numero_CB" class="form-control-label">Numero CB</label>
-                  <input minlength='16' maxlength='16' type="text" class="form-control" id="Numero_CB" placeholder="2312 2233 5675 4432" name="Numero_CB">
+                  <input minlength='16' maxlength='16' type="text" class="form-control" id="Numero_CB" placeholder="2312 2233 5675 4432" name="Numero_CB" required >
                 </div>
                 <div class="form-group">
                   <label for="Mois" class="form-control-label">Mois</label>
-                  <select '<input type="text" class="form-control" id="Mois" placeholder="Mois" name="Mois">' >
+                  <select '<input type="text" class="form-control" id="Mois" placeholder="Mois" name="Mois" required>' >
                     <option>Janvier</option>
                     <option>Fevrier</option>
                     <option>Mars</option><option>Avril</option>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="form-group">
                   <label for="Annee" class="form-control-label">Année</label>
-                  <select '<input type="text" class="form-control" id="Annee" placeholder="Annee" name="Annee">' >
+                  <select '<input type="text" class="form-control" id="Annee" placeholder="Annee" name="Annee" required>' >
                     <option>2017</option>
                     <option>2018</option>
                     <option>2019</option><option>2020</option>
@@ -41,11 +41,11 @@
                 </div>
                 <div class="form-group">
                   <label for="Marque" class="form-control-label">CVV</label>
-                  <input minlength='3' maxlength='3' type="text" class="form-control" id="CVV" placeholder="345" name="CVV">
+                  <input min='100' max='999' type="number" class="form-control" id="CVV" placeholder="345" name="CVV" required>
                 </div>
                 <div class="form-group">
                   <label for="Marque" class="form-control-label">Solde</label>
-                  <input maxlength='9' type="text" class="form-control" id="Solde" placeholder="EUR" name="Solde">
+                  <input min="1" max="3000" type="number" class="form-control" id="Solde" placeholder="EUR" name="Solde" required>
                 </div>
               </form>
             </div>
@@ -54,6 +54,8 @@
               <input type="submit" value="Ajouter" class="btn btn-primary"></button>
             </div>
             </form>
+
+
           </div>
         </div>
       </div>
