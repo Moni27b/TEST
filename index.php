@@ -7,7 +7,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="bootstrap-3.3.7/docs/favicon.ico">
+
 
     <title>HomePay</title>
 
@@ -17,8 +17,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -33,6 +31,7 @@
 
   <body>
 
+
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
             <div class="navbar-header">
@@ -43,11 +42,7 @@
                 <span class="icon-bar"></span>
               </button>
 
-              <a class="navbar-brand" href="#">HomePay</a>
-
-
-
-
+              <a class="navbar-brand" >HomePay</a>
 
             </div>
                 <div id="navbar" class="navbar-collapse collapse">
@@ -63,15 +58,24 @@
                     <button type="submit" class="btn btn-success">Se connecter</button>
                   </form>
                 </div><!--/.navbar-collapse -->
+
       </div>
+
     </nav>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
+        <?php
+                $not=  $_GET['valmsg'];
+                if ($not == 1){ ?>
+                  <div class="alert alert-danger">
+                    <strong>Impossible</strong> Wrong password or IPN.
+                  </div>
+              <?php } ?>
         <h1>Bienvenue sur HomePay</h1>
         <p>Votre platforme de paiment en ligne</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">à propos &raquo;</a></p>
+
       </div>
     </div>
 
@@ -79,20 +83,13 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-
-
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-      </div>
 
+      </div>
       <hr>
 
       <footer>
-        <p>&copy; 2016 Mounir Benbouhou, .</p>
+        <p>&copy; 2017 - Mounir Benbouhou - Cecilia Frigout - Jaqulin Ripoche .</p>
       </footer>
     </div> <!-- /container -->
 

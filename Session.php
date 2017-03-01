@@ -4,15 +4,11 @@
 session_start ();
 
 // On récupère nos variables de session
-
-
 if (isset($_SESSION['Nom']) && isset($_SESSION['N_Compte'])) {
-
-
 }
 else {
-
-  die( "Login required." );
+  // on renvoie sur la page index en affichant une erreur
+  die('<META HTTP-equiv="refresh" content=0;URL=index.php?valmsg=1>');
 }
 
 ?>

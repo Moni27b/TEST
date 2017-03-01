@@ -9,7 +9,7 @@
   <meta name="author" content="">
   <link rel="icon" href="bootstrap-3.3.7/docs/favicon.ico">
 
-  <title>Tracker des appareils mobile</title>
+  <title>HomePay</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -55,7 +55,7 @@ include("Session.php");
           <ul class="nav navbar-nav">
             <li ><a href="HomeUser.php">Accueil</a></li>
             <li><a href="GestionCB.php">Gestion CB</a></li>
-            <li ><a href="GestionPaiment.php">Paiment</a></li>
+            <li ><a href="GestionPaiment.php">Paiement</a></li>
             <li  class="active" ><a href="#">Historique</a></li>
 
 
@@ -83,7 +83,7 @@ include("Session.php");
             <tr>
 
                  <th>id Paiment</th>
-                 <th>Commercant</th>
+                 <th>Commerçant</th>
                  <th>Montant</th>
                  <th>Numero CB</th>
                  <th>Date Paiment</th>
@@ -92,12 +92,13 @@ include("Session.php");
 
 
         </thead>
-        <?php while($row = $resultP->fetch()) {?>
+        <?php while($row = $resultP->fetch()) {
+          $var = substr_replace($row['Num_CB'], str_repeat("X", 8), 4, 8);?>
           <tr>
             <td><? echo $row['idPaiment']; ?></td>
             <td><? echo $row['Commercant']; ?></td>
             <td><? echo $row['Montant']; ?></td>
-            <td><? echo $row['Num_CB']; ?></td>
+            <td><? echo $var; ?></td>
             <td><? echo $row['DateP']; ?></td>
 
 

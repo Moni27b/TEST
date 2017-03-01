@@ -5,11 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="icon" href="bootstrap-3.3.7/docs/favicon.ico">
 
-  <title>Tracker des appareils mobile</title>
+
+  <title>HomePay</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../bootstrap-3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,21 +15,14 @@
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link href="bootstrap-3.3.7/docs/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="jumbotron.css" rel="stylesheet">
-
   <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
   <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
   <script src="bootstrap-3.3.7/docs/assets/js/ie-emulation-modes-warning.js"></script>
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
+
 
 <?php
-include("Session.php");
+include("Session.php");  // inclure le script session pour ouvrir une session
 ?>
 </head>
 
@@ -48,7 +39,7 @@ include("Session.php");
             <span class="icon-bar"></span>
           </button>
 
-          <a class="navbar-brand" href="#">HomePay</a>
+          <a class="navbar-brand" >HomePay</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse">
@@ -57,37 +48,26 @@ include("Session.php");
             <li ><a href="GestionCB.php">Gestion CB</a></li>
             <li ><a href="GestionPaiment.php">Paiment</a></li>
             <li ><a href="Historique.php">Historique</a></li>
-
-
           </ul>
           <ul class="nav navbar-nav navbar-right">
-
                 <ul class=" bouton-right">
                     <a  href="./Deconnect.php" class="btn btn-danger " role="button">
                           <span class="glyphicon glyphicon-log-out " aria-hidden="true"></span>Se deconnecter
                     </a>
                 </ul>
           </ul>
-        </div><!--/.nav-collapse -->
+        </div>
+        <!--/.nav-collapse -->
       </div>
     </nav>
 
-
+  <!-- Main component for a primary marketing message or call to action -->
     <div class="container">
-
-
-        <!-- Main component for a primary marketing message or call to action -->
         <div class="jumbotron">
           <h1> <?php echo 'Bonjour '.$_SESSION['Nom']; ?></h1>
-          <p>This example is a quick exercise to illustrate how the default, static and fixed to top navbar work. It includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-          <p>To see the difference between static and fixed top navbars, just scroll.</p>
-          <p>
-
-          </p>
+          <p>Votre Plateforme de paiment en ligne.</p>
+          <p></p>
         </div>
-
-      <!-- Main component for a primary marketing message or call to action -->
-
     </div> <!-- /container -->
 
 
